@@ -1,0 +1,14 @@
+﻿@model Person
+
+<form asp-controller="Home" asp-action="Edit" method="post">
+    <div class="mb-3">
+        <label asp-for=Name class="form-lable"></label>
+        <input class="form-control" asp-for="Name" aria-describedby="nameHelp"></input>
+        <div id="nameHelp" class="form-text">Enter New Name</div>
+
+        </div>
+<button type="submit" class="btn-primary">Edit</button>
+
+
+
+</form>

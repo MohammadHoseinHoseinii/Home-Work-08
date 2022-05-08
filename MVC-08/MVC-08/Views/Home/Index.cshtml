@@ -1,0 +1,31 @@
+﻿@model List<Person>
+@{
+    int oop = 1;
+
+}
+
+<table class="table table-striped table-hover">
+
+    <thead>
+    <th>Number</th>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </thead>
+    <tbody>
+
+        @foreach (var person in Model)
+
+        {
+            <tr>
+                <td>@oop</td>
+                <td>@person.Id</td>
+                <td>@person.Name</td>
+                <td><a type="button" class="btn btn-warning" asp-controller="Home" asp-action="Edit" asp-route-id=@person.Id>  Edit </a> </td>
+                <td><a type="button" class="btn btn-danger" asp-controller="Home" asp-action="Detele" asp-route-id=@person.Id> Detele</a></td>
+
+            </tr>
+            oop++;
+        }
+    </tbody>
